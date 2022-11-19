@@ -99,6 +99,9 @@ end
 ![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
 
 ![LocalImage]({{site.url}}/assets/images/clock_blue.png)
+![LocalImage]({{site.baseurl}}/assets/images/clock_blue.png)
+![LocalImage](/assets/images/clock_blue.png)
+![LocalImage](assets/images/clock_blue.png)
 
 ### Large image
 ![Branching](https://github.githubassets.com/images/icons/emoji/octocat.png)
