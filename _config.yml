@@ -41,7 +41,6 @@ baseurl:
 show_downloads: false
 show_github_link: false
 var001: test_custom_variable
-google_analytics: G-B7KEDTY625
 
 collections:
  my_collection:
