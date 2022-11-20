@@ -12,7 +12,7 @@ layout: default
     {% for post in site.posts %}
     <tr>
     <td>
-        <a href="{% if jekyll.environment=='production' %}{{site.github.repository_name}}{% endif %}{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
     </td>
 
       <td>{{ post.date| date: "%Y-%m-%d %H:%M" }}</td>
