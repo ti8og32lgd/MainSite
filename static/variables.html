@@ -29,7 +29,24 @@ layout: default
   <tr>
     <td>site.lang</td><td>{{site.lang}}</td>
   </tr>
-
+  <tr>
+    <td>site.show_downloads</td><td>{{site.show_downloads}}</td>
+    </tr>
+    <tr>
+       <td>site.var001</td><td>{{site.var001}}</td>
+    </tr>
+<tr>
+  <td>post_url 2022-11-20-variables</td>
+  <td>{% post_url 2022-11-20-variables %}</td>
+</tr>
+<tr>
+  <td>baseurl</td>
+  <td>{{site.baseurl}}</td>
+</tr>
+<tr>
+  <td>site.github.repository_name</td>
+  <td>{{site.github.repository_name}}</td>
+</tr>
 </table>
 
 
@@ -46,8 +63,9 @@ layout: default
           {{post.title}}
         </td>
         <td>
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{% if jekyll.environment=='production' %}{{site.github.repository_name}}{% endif %}{{ post.url }}">{{ post.title }}</a>
         </td>
+        <td>{{ post.date }}</td>
       </tr>
       {% endfor %}
     </table>

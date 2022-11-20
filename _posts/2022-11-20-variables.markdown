@@ -32,3 +32,14 @@ title: Variable test
   </tr>
 
 </table>
+
+# defined data
+<ul>
+{% for member in site.data.myConf %}
+  <li>
+    <a href="https://github.com/{{ member.github }}">
+      {{ member.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
