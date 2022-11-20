@@ -1,0 +1,5 @@
+jekylly local build
+https://github.com/envygeeks/jekyll-docker/blob/master/README.md
+
+
+docker run --name myJekyll-MainSite  --volume="%CD%:/srv/jekyll"      -p 4000:4000     -it  jekyll/jekyll  bash

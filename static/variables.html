@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+
+<table>
+  <tr>    <th>Variables</th>  </tr>
+  <tr>
+    <td>site.time </td> <td>{{site.time}} </td>
+  </tr>
+
+  <tr>
+    <td>jekyll.environment</td>
+    <td>{{jekyll.environment}}</td>
+  </tr>
+  <tr>
+    <td>scope</td>
+    <td>{{scope}}</td>
+  </tr>
+
+  <tr>
+    <td>page.title</td>
+    <td>{{page.title}}</td>
+  </tr>
+  <tr>
+    <td>file.path</td>
+    <td>{{file.path}}</td>
+  </tr>
+  <tr>
+    <td>site.lang</td><td>{{site.lang}}</td>
+  </tr>
+
+</table>
+
+
+
+
+
+<newlines>
+  <table>
+    <tr>
+      <tr>    <th>Posts</th>  </tr>
+      {% for post in site.posts %}
+      <tr>
+        <td>
+          {{post.title}}
+        </td>
+        <td>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+
+    <table>
+      <tr>    <th>static_files</th>  </tr>
+      {% for f in site.static_files %}
+      <tr>
+        <td>
+          {{f.path}}
+        </td>
+        <td>
+          {{f.modified_time}}
+        </td>
+
+        <td>
+          {{f.extname}}
+        </tr>
+
+        {% endfor %}
+
+      </table>
+
+      <table>
+        <tr>    <th>html_files</th>  </tr>
+        {% for f in site.html_files %}
+        <tr>
+          <td>
+            {{f.path}}
+          </td>
+          <td>
+            {{f.modified_time}}
+          </td>
+
+          <td>
+            {{f.extname}}
+          </tr>
+
+          {% endfor %}
+
+        </table>
