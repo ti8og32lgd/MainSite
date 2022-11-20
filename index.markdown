@@ -8,11 +8,12 @@ layout: default
 
 # All Blogs
 <table>
-    <tr><th>title</th> <th>time</th> </tr>
+    <tr><th>title</th> <th>link</th> <th>time</th> </tr>
     {% for post in site.posts %}
     <tr>
+    <td>{{ post.title }}</td>
     <td>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.url }}</a>
     </td>
 
       <td>{{ post.date| date: "%Y-%m-%d %H:%M" }}</td>
